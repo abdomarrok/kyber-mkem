@@ -28,7 +28,7 @@ clock_t t;
     printf("%f@@", time_taken*1000);
 
 
-  
+  //
   
   for (i = 0; i < MKYBER_PUBLICKEYBYTES; i++) {
     printf("%02x", pk[i]);

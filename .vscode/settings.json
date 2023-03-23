@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "params.h": "c",
+        "mkem.h": "c"
+    }
+}

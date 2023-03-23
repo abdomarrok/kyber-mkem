@@ -1,4 +1,4 @@
-CC = /usr/bin/clang
+CC = gcc
 CFLAGS += -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls \
   -Wshadow -Wpointer-arith -mavx2 -mbmi2 -mpopcnt -maes \
   -march=native -mtune=native -O3 -fomit-frame-pointer
@@ -64,7 +64,8 @@ testvectors768: $(SOURCES) $(SOURCESKECCAK) $(HEADERS) testvectors.c
 testvectors1024: $(SOURCES) $(SOURCESKECCAK) $(HEADERS) testvectors.c
 	$(CC) $(CFLAGS) -DKYBER_K=4 $(SOURCES) $(SOURCESKECCAK) testvectors.c -o $@
 
-
+example: $(SOURCES) $(HEADERS) example.c
+	$(CC) $(CFLAGS) -DKYBER_K=2  $(SOURCES) $(SOURCESKECCAK) randombytes.c example.c -o $@
 
 clean:
 	-$(RM) -rf *.gcno *.gcda *.lcov *.o *.so

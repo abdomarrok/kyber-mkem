@@ -4,6 +4,9 @@
 #include <string.h>
 #include "mkem.h"
 #include "randombytes.h"
+#include <time.h>
+
+
 
 int main(void)
 {
@@ -15,14 +18,29 @@ int main(void)
   size_t i;
   
   randombytes(seed, KYBER_SYMBYTES);
-  crypto_mkem_keypair(pk, sk, seed);
+ 
+
+clock_t t;
+    t = clock();
+     crypto_mkem_keypair(pk, sk, seed);
+    t = clock() - t;
+    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
+    printf("%f@@", time_taken*1000);
+
+
   
   
   for (i = 0; i < MKYBER_PUBLICKEYBYTES; i++) {
     printf("%02x", pk[i]);
   } 
-  printf("@");
+  printf("@@");
   for (i = 0; i < MKYBER_SECRETKEYBYTES; i++) {
     printf("%02x", sk[i]);
   }
+
+
+  return 0;
 }
+
+
+

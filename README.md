@@ -1,4 +1,4 @@
-# Kyber-mKEM
+
 
 This repository contains implementations of a multi-KEM (mKEM) based on the 
 [NIST PQC finalist Kyber](https://pq-crystals.org/kyber). 
@@ -74,19 +74,16 @@ int crypto_mkem_enc_c2(uint8_t *c2,
                        const uint8_t *pk,
                        const uint8_t *r,
                        const uint8_t *fwd);
-```
-
-## Example usage
-
-For an example of how to use the API functions, see the `test_keys` function in file `ref/test_mkyber.c`.
-
+`
 ## Build instructions 
 
 These instructions are assuming a typical Linux build environment with clang and GNU make installed):
 
 ```
-cd ref && make && ./test.sh
-cd ../avx2 && make && ./test.sh
+
+cd ../avx2 && make all 
+
+
 ```
 
 This will build and run functional tests and generate and compare test vectors
@@ -101,3 +98,4 @@ cd avx2
 ./bench_mkyber768
 ./bench_mkyber1024
 ```
+

@@ -18,14 +18,15 @@ HEADERS = align.h api.h cbd.h consts.h fips202.h fips202x4.h indcpa.h mkem.h ntt
 
 all: \
   test_mkyber512 \
-  test_mkyber768 \
-  test_mkyber1024 \
-  bench_mkyber512 \
-  bench_mkyber768 \
-  bench_mkyber1024 \
-  testvectors512 \
-  testvectors768 \
-  testvectors1024
+  example\
+#   test_mkyber768 \
+#   test_mkyber1024 \
+#   bench_mkyber512 \
+#   bench_mkyber768 \
+#   bench_mkyber1024 \
+#   testvectors512 \
+#   testvectors768 \
+#   testvectors1024
 
 
 keccak4x/KeccakP-1600-times4-SIMD256.o: \

@@ -1,0 +1,15 @@
+ref/testvectors1024
+ref/testvectors768
+ref/testvectors512
+ref/test_mkyber768
+ref/test_mkyber1024
+ref/test_mkyber512
+ref/Makefile
+ref/bench_mkyber1024
+ref/bench_mkyber768
+ref/bench_mkyber512
+avx2/keccak4x/KeccakP-1600-times4-SIMD256.o
+avx2/example
+avx2/test_mkyber512
+ref/Makefile
+ref/Makefile
